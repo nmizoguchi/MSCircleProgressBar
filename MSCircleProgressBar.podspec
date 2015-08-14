@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MSCircleProgressBar"
-  s.version          = "0.1.0"
+  s.version          = "0.0.1"
   s.summary          = "This library provides a circular progress bar."
 
 # This description is used to generate tags and improve search results.
