@@ -27,3 +27,4 @@ Nicholas M. Mizoguchi, ichnich@gmail.com
 ## License
 
 MSCircleProgressBar is available under the MIT license. See the LICENSE file for more info.
+=======
