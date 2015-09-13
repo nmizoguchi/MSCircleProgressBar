@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,8 +17,78 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WYa-YU-JhP" customClass="MSCircleProgressBar">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WYa-YU-JhP" secondAttribute="height" multiplier="1:1" id="2SF-QZ-pI7"/>
+                                    <constraint firstAttribute="width" constant="200" id="n9r-65-lro"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleBackgroundColor">
+                                        <color key="value" red="0.1529411765" green="0.1529411765" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                        <color key="value" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationTime">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="circleStroke">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="80"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isR-LP-KPg">
+                                <rect key="frame" x="225" y="437" width="149" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7M-sH-IlQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
+                                        <state key="normal" title="Rewind">
+                                            <color key="titleColor" red="0.8912609816" green="0.35455638169999998" blue="0.39968371390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onRewindPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="og9-jb-tLS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6q-J5-wFu">
+                                        <rect key="frame" x="92" y="0.0" width="57" height="30"/>
+                                        <state key="normal" title="Forward">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onForwardPressed:" destination="whP-gf-Uak" eventType="touchUpInside" id="hxe-Uk-0vY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="J6q-J5-wFu" firstAttribute="leading" secondItem="i7M-sH-IlQ" secondAttribute="trailing" constant="40" id="Azs-Th-Unb"/>
+                                    <constraint firstItem="i7M-sH-IlQ" firstAttribute="leading" secondItem="isR-LP-KPg" secondAttribute="leading" id="SBG-xd-whc"/>
+                                    <constraint firstItem="i7M-sH-IlQ" firstAttribute="top" secondItem="isR-LP-KPg" secondAttribute="top" id="V3K-UV-TCo"/>
+                                    <constraint firstItem="J6q-J5-wFu" firstAttribute="top" secondItem="isR-LP-KPg" secondAttribute="top" id="WmN-eV-cLi"/>
+                                    <constraint firstAttribute="bottom" secondItem="i7M-sH-IlQ" secondAttribute="bottom" id="hjq-Mw-bt0"/>
+                                    <constraint firstAttribute="bottom" secondItem="J6q-J5-wFu" secondAttribute="bottom" id="tiW-du-rOW"/>
+                                    <constraint firstAttribute="trailing" secondItem="J6q-J5-wFu" secondAttribute="trailing" id="yNU-E0-fvF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="isR-LP-KPg" firstAttribute="centerX" secondItem="WYa-YU-JhP" secondAttribute="centerX" id="RiY-0e-dPX"/>
+                            <constraint firstItem="isR-LP-KPg" firstAttribute="top" secondItem="WYa-YU-JhP" secondAttribute="bottom" constant="37" id="SNI-eE-Zdc"/>
+                            <constraint firstAttribute="centerX" secondItem="WYa-YU-JhP" secondAttribute="centerX" id="Z6S-MJ-rOw"/>
+                            <constraint firstAttribute="centerY" secondItem="WYa-YU-JhP" secondAttribute="centerY" id="jS1-3o-geS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="circleProgressBar" destination="WYa-YU-JhP" id="rQQ-Yk-vH3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
