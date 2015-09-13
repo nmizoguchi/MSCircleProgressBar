@@ -9,21 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = "MSCircleProgressBar"
   s.version          = "0.1.0"
-  s.summary          = "A short description of MSCircleProgressBar."
+  s.summary          = "This library provides a circular progress bar."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "The progress bar can be customized according to the README in the github repo."
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/MSCircleProgressBar"
+  s.homepage         = "https://github.com/nmizoguchi/MSCircleProgressBar"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Nicholas M. Mizoguchi" => "ichnich@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/MSCircleProgressBar.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/nmizoguchi/MSCircleProgressBar.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'

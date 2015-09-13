@@ -1,0 +1,6 @@
+framework module MSCircleProgressBar {
+  umbrella header "Pods-MSCircleProgressBar_Example-MSCircleProgressBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
