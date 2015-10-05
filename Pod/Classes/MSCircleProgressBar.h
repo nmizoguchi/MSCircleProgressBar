@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-IB_DESIGNABLE
 @interface MSCircleProgressBar : UIView
 
 @property (nonatomic,strong) IBInspectable UIColor *circleBackgroundColor;
